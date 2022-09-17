@@ -114,7 +114,7 @@ public class NowPlayingCommand implements ICommand {
         try {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(uri))
-                    .header("X-RapidAPI-Key", "e8de7cb3f5mshcfd7c28e8bf9854p1cb488jsn76d40bccf432")
+                    .header("X-RapidAPI-Key", Config.get("shazam_api_key"))
                     .header("X-RapidAPI-Host", "shazam.p.rapidapi.com")
                     .method("GET", HttpRequest.BodyPublishers.noBody())
                     .build();
